@@ -1,0 +1,18 @@
+Jobs Portal:
+    ✔ Dockerize Project @done (10/13/2019, 3:22:39 AM)
+    ✔ Setup React with Typescript @done (10/13/2019, 3:22:46 AM)
+    ✔ Setup React Bootstrap @done (10/13/2019, 3:23:06 AM)
+    ✔ Add SASS/SCSS Support @done (10/13/2019, 3:23:07 AM)
+    ✔ Create home page @done (10/13/2019, 3:23:08 AM)
+        ✔ NavigationBar @done (10/13/2019, 3:23:09 AM)
+        ✔ SearchArea @done (10/13/2019, 3:23:10 AM)
+        ✔ JobItems @done (10/13/2019, 3:23:11 AM)
+    ✔ Setup mock backend server @done (10/13/2019, 3:23:12 AM)
+    ✔ Add mock jobs endpoint @done (10/13/2019, 3:23:13 AM)
+    ✔ Split App file into multiple containers @done (10/13/2019, 3:23:36 AM)
+    ☐ Add react router Support
+    ☐ Add link functionality to logo
+    ☐ Setup new For Job Posters page
+    ☐ Setup new For Job Seekers page
+    ☐ Add new endpoint for job search
+    ☐ Setup new Search page for job JobItems
