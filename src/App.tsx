@@ -41,11 +41,11 @@ const App: React.FC = () => {
                 <Form.Row>
                   <Form.Group as={Col}>
                     <Form.Label>What</Form.Label>
-                    <Form.Text>job title, keywords, or company</Form.Text>
+                    <Form.Text>job title, or keywords</Form.Text>
                     <Form.Control
                       required
                       type="text"
-                      placeholder="e.g. Keywords, Position..."
+                      placeholder="e.g. Programming, or Software Engineer"
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group as={Col}>
@@ -53,7 +53,7 @@ const App: React.FC = () => {
                     <Form.Text>city, or organization</Form.Text>
                     <Form.Control
                       type="text"
-                      placeholder="e.g. IT, Business Administration"
+                      placeholder="e.g. Kabul, Herat, or Tetra Tech"
                     ></Form.Control>
                   </Form.Group>
                 </Form.Row>
@@ -71,7 +71,7 @@ const App: React.FC = () => {
             <Card className="job">
               <Card.Body>
                 <Row>
-                  <Col xs={10}>
+                  <Col xs={9}>
                     <Card.Title>Front-End Developer</Card.Title>
                   </Col>
                   <Col className="text-right">
@@ -113,7 +113,7 @@ const App: React.FC = () => {
             <Card className="job">
               <Card.Body>
                 <Row>
-                  <Col xs={10}>
+                  <Col xs={9}>
                     <Card.Title>Finance Manager</Card.Title>
                   </Col>
                   <Col className="text-right">
@@ -155,7 +155,7 @@ const App: React.FC = () => {
             <Card className="job">
               <Card.Body>
                 <Row>
-                  <Col xs={10}>
+                  <Col xs={9}>
                     <Card.Title>Senior M&E Specialist</Card.Title>
                   </Col>
                   <Col className="text-right">
