@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+$primary: #008080;
+$font-family-sans-serif: "Lato", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/variables";
+
+.jumbotron {
+  background-color: $white;
+
+  &__title {
+    font-size: $h1-font-size * 1;
+    font-weight: $font-weight-bolder;
+    margin: 1rem auto;
+  }
+
+  &__sub-title {
+    font-size: $h2-font-size * .8;
+    margin: 1.5rem auto;
+  }
+}
