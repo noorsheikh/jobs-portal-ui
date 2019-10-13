@@ -1,1 +1,39 @@
 
+.jumbotron {
+    background-color: #ffffff;
+
+    padding: 5rem 0;
+    &__title {
+      font-size: $h1-font-size * 1.5;
+      font-weight: $font-weight-bold + 200;
+      margin: 1rem auto;
+    }
+
+    &__sub-title {
+      font-size: $h2-font-size;
+      margin: 1.5rem auto;
+    }
+}
+
+.job {
+    margin-bottom: 1.2rem;
+}
+
+.job-skill {
+    margin-right: .1rem;
+    padding: .3rem .8rem;
+    color: $primary;
+}
+
+.job-meta {
+    margin-right: 2rem;
+
+    &__icon {
+        margin-right: .3rem;
+        color: $primary;
+    }
+}
+
+.row-spacing {
+    margin-top: 1rem;
+}
