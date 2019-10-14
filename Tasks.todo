@@ -10,9 +10,9 @@ Jobs Portal:
     ✔ Setup mock backend server @done (10/13/2019, 3:23:12 AM)
     ✔ Add mock jobs endpoint @done (10/13/2019, 3:23:13 AM)
     ✔ Split App file into multiple containers @done (10/13/2019, 3:23:36 AM)
-    ☐ Add react router Support
-    ☐ Add link functionality to logo
-    ☐ Setup new For Job Posters page
-    ☐ Setup new For Job Seekers page
+    ✔ Add react router Support @done (10/13/2019, 8:49:22 PM)
+    ✔ Add link functionality to logo @done (10/13/2019, 8:56:55 PM)
+    ✔ Setup new For Job Posters page @done (10/13/2019, 8:56:58 PM)
+    ✔ Setup new For Job Seekers page @done (10/13/2019, 8:57:00 PM)
     ☐ Add new endpoint for job search
     ☐ Setup new Search page for job JobItems

@@ -1,14 +1,12 @@
 import React from 'react';
-import {
-  Container,
-  Row,
-  Col
-} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import axios from 'axios';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Home from './containers/Home';
+import JobPoster from './containers/JobPoster';
+import JobSeeker from './containers/JobSeeker';
 import NavigationBar from './components/NavigationBar';
-import SearchArea from './components/SearchArea';
-import JobItem from './components/JobItem';
 import Job from './models/Job';
 
 interface AppState {
@@ -33,21 +31,14 @@ class App extends React.Component<{}, AppState> {
   render() {
     const { jobs } = this.state;
     return (
-      <div className="App">
+      <Router>
         <Container>
           <NavigationBar />
         </Container>
-          <SearchArea />
-        <Container>
-          <Row className="justify-content-md-center">
-            <Col lg={10}>
-              {jobs && jobs.map(job => {
-                return <JobItem {...job} key={job.id} />
-              })}
-            </Col>
-          </Row>
-        </Container>
-      </div>
+        <Route path="/" exact render={() => <Home jobs={jobs} />} />
+        <Route path="/jobs-posters" render={() => <JobPoster />} />
+        <Route path="/jobs-seekers" render={() => <JobSeeker />} />
+      </Router>
     )
   }
 }
