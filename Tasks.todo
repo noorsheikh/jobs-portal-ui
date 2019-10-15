@@ -16,3 +16,5 @@ Jobs Portal:
     ✔ Setup new For Job Seekers page @done (10/13/2019, 8:57:00 PM)
     ☐ Add new endpoint for job search
     ☐ Setup new Search page for job JobItems
+    ✔ React/Redux Support @done (10/14/2019, 10:14:09 PM)
+    ✔ Redux support for jobs endpoint @done (10/14/2019, 10:14:12 PM)

@@ -6,15 +6,26 @@ import {
 } from 'react-bootstrap';
 import JobItem from '../../components/JobItem';
 import SearchArea from '../../components/SearchArea';
-import Job from '../../models/Job';
+import { connect } from 'react-redux';
+import { fetchJobs } from '../../actions';
+import { JobsState } from '../../models/States';
 
 interface HomePropos {
-    jobs: Job[]
+    jobs: JobsState;
+    fetchJobs: Function;
+}
+
+interface HomeState {
+    jobs: JobsState
 }
 
 class Home extends React.Component<HomePropos, {}> {
+    componentDidMount() {
+        this.props.fetchJobs();
+    }
+
     render() {
-        const { jobs } = this.props;
+        const { jobs } = this.props.jobs;
         return (
             <React.Fragment>
                 <SearchArea />
@@ -32,4 +43,8 @@ class Home extends React.Component<HomePropos, {}> {
     }
 }
 
-export default Home;
+const mapStateToProps = (state: HomeState) => ({
+    jobs: state.jobs
+})
+
+export default connect(mapStateToProps, {fetchJobs})(Home);
