@@ -46,7 +46,9 @@ export const fetchJobs = () => async (dispatch: Dispatch) => {
     dispatch(fetchJobsPending());
     try {
         const jobs = await axios.get('http://localhost:3030/jobs');
-        dispatch(fetchJobsSuccess(jobs.data.jobs));
+        setTimeout(() => {
+            dispatch(fetchJobsSuccess(jobs.data));
+        }, 1000);
     } catch(error) {
         dispatch(fetchJobsError(error));
     }

@@ -13,7 +13,13 @@ module.exports = function startMockServer(port) {
     const router = jsonServer.router(data);
 
     server.get('/jobs', (req, res) => {
-        res.jsonp(JSON.parse(JSON.stringify(data.jobs)));
+        res.jsonp(data.jobs);
+    });
+
+    server.post('/jobs/search/:what/:where', (req, res) => {
+        const what = req.params.what;
+        const where = req.params.where;
+        res.jsonp(data.jobs.filter(job => job.title == what || job.location == where));
     });
 
     server.use(router);
