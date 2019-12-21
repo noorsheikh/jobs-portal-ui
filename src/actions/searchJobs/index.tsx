@@ -45,7 +45,8 @@ const searchJobsError = (error: string): JobsError => {
 export const searchJobs = (what: string, where: string) => async (dispatch: Dispatch) => {
     dispatch(searchJobsPending());
     try {
-        const jobs = await axios.post(`http://localhost:3030/jobs/search/${what}/${where}`);
+        const jobs = await axios.post(`http://localhost:3030/jobs/search`, null, { params: {what, where} });
+
         setTimeout(() => {
             dispatch(searchJobsSuccess(jobs.data));
         }, 1000);

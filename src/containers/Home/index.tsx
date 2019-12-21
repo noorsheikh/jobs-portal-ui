@@ -36,17 +36,22 @@ class Home extends React.Component<HomePropos, {}> {
 
     renderLatestJobs = (jobs: Job[]) => {
         return jobs.map(job => {
-            return <JobItem {...job} key={job.id} />
+            return <JobItem {...job} key={job.id} />;
         })
     }
 
-    loadingJobs = (isLoading: boolean) => (<FontAwesomeIcon style={{textAlign: "center"}} icon={faSpinner} pulse />)
+    noJobsFound = () => {
+        return <h2 className="text-center">No Jobs Found!</h2>;
+    }
+
+    loadingJobs = () => (<FontAwesomeIcon style={{textAlign: "center"}} icon={faSpinner} pulse />)
 
     render() {
         const { searchJobs } = this.props;
         const jobsSearchResult = this.props.jobsSearchResult.jobs;
         const latestJobs = this.props.jobs.jobs;
         const isLoading: boolean = this.props.jobsSearchResult.pending || this.props.jobs.pending;
+        console.log(jobsSearchResult);
         return (
             <React.Fragment>
                 <SearchArea searchJobs={searchJobs} />
@@ -54,10 +59,10 @@ class Home extends React.Component<HomePropos, {}> {
                     <Row className="justify-content-md-center">
                         <Col lg={10} className={(isLoading ? 'text-center' : '')}>
                             {isLoading ? (
-                                this.loadingJobs(isLoading)
+                                this.loadingJobs()
                             ) : (
                                 jobsSearchResult.length > 0 ? this.renderJobsSearchResult(jobsSearchResult)
-                                    : this.renderLatestJobs(latestJobs)
+                                    : this.noJobsFound()
                             )}
                         </Col>
                     </Row>

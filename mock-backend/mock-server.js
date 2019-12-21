@@ -16,10 +16,24 @@ module.exports = function startMockServer(port) {
         res.jsonp(data.jobs);
     });
 
-    server.post('/jobs/search/:what/:where', (req, res) => {
-        const what = req.params.what;
-        const where = req.params.where;
-        res.jsonp(data.jobs.filter(job => job.title == what || job.location == where));
+    server.post('/jobs/search', (req, res) => {
+        const what = new RegExp(req.query.what, 'gi');
+        const where = new RegExp(req.query.where, 'gi');
+        let response = [];
+
+        if (what !== 'undefined' && where !== 'undefined') {
+            response = data.jobs.filter(job => job.title.match(what) && (job.location.match(where) || job.company.match(where)));
+        }
+
+        if (what !== 'undefined' && where === 'undefined') {
+            response = data.jobs.filter(job => job.title.match(what));
+        }
+
+        if (response.length <= 0) {
+            res.json({ message: 'No Jobs Found'});
+        }
+
+        res.json(response);
     });
 
     server.use(router);

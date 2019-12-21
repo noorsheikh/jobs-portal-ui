@@ -32,6 +32,10 @@ class SearchArea extends React.Component<SearchPropos, SearchState> {
         e.preventDefault();
     }
 
+    clearSearch = (): void => {
+        window.location.reload(false);
+    }
+
     render() {
         return (
             <Jumbotron className="jumbotron">
@@ -64,7 +68,8 @@ class SearchArea extends React.Component<SearchPropos, SearchState> {
                         </Form.Row>
                         <Row className="text-right">
                             <Col>
-                                <Button variant="primary" type="submit">Find Jobs</Button>
+                            <Button variant="secondary" className="btn-space" onClick={this.clearSearch}>Clear Search</Button>
+                            <Button variant="primary" type="submit">Find Jobs</Button>
                             </Col>
                         </Row>
                     </Form>
