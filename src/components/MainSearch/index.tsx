@@ -10,6 +10,7 @@ import {
 
 interface SearchPropos {
     searchJobs: Function;
+    history: any;
 }
 
 interface SearchState {
@@ -17,7 +18,7 @@ interface SearchState {
     where: string;
 }
 
-class SearchArea extends React.Component<SearchPropos, SearchState> {
+class MainSearch extends React.Component<SearchPropos, SearchState> {
     handleChange = (e: any) => {
         const {name, value} = e.currentTarget;
         this.setState({[name]: value} as SearchState, () => {
@@ -30,6 +31,7 @@ class SearchArea extends React.Component<SearchPropos, SearchState> {
         console.log(this.state);
         this.props.searchJobs(what, where);
         e.preventDefault();
+        this.props.history.push('/search');
     }
 
     clearSearch = (): void => {
@@ -79,4 +81,4 @@ class SearchArea extends React.Component<SearchPropos, SearchState> {
     }
 }
 
-export default SearchArea;
+export default MainSearch;
