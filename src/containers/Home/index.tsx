@@ -2,15 +2,18 @@ import React from 'react';
 import {
     Container,
     Row,
-    Col
+    Col,
+    Jumbotron,
 } from 'react-bootstrap';
 import JobItem from '../../components/JobItem';
-import MainSearch from '../../components/MainSearch';
 import { connect } from 'react-redux';
 import { fetchJobs, searchJobs } from '../../actions';
 import { JobsState } from '../../models/States';
 import Job from '../../models/Job';
 import LoadingJobs from '../../components/LoadingJobs';
+import JumbotronTitle from '../../components/JumbotronTitle';
+import JumbotronSubtitle from '../../components/JumbotronSubtitle';
+import SearchForm from '../../components/SearchForm';
 
 interface HomePropos {
     jobs: JobsState;
@@ -34,17 +37,19 @@ class Home extends React.Component<HomePropos, {}> {
         })
     }
 
-    noJobsFound = () => {
-        return <h2 className="text-center">No Jobs Found!</h2>;
-    }
-
     render() {
         const { searchJobs, history } = this.props;
-        const latestJobs = this.props.jobs.jobs;
+        const latestJobs: Job[] = this.props.jobs.jobs;
         const isLoading: boolean = this.props.jobs.pending;
         return (
             <React.Fragment>
-                <MainSearch searchJobs={searchJobs} history={history} />
+                <Jumbotron className="main-jumbotron">
+                    <Container>
+                        <JumbotronTitle />
+                        <JumbotronSubtitle />
+                        <SearchForm searchJobs={searchJobs} history={history} />
+                    </Container>
+                </Jumbotron>
                 <Container>
                     <Row className="justify-content-md-center">
                         <Col lg={10} className={(isLoading ? 'text-center' : '')}>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAsia, faMapMarkedAlt, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Job from '../../models/Job';
 
-const JobItem: React.FC<Job> = (job) => {
+const JobItem: React.FC<Job> = (job: Job) => {
     return (
         <Card className="job">
             <Card.Body>

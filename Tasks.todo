@@ -19,6 +19,7 @@ Jobs Portal:
     ✔ React/Redux Support @done (10/14/2019, 10:14:09 PM)
     ✔ Redux support for jobs endpoint @done (10/14/2019, 10:14:12 PM)
     ☐ Enhance search functionality by search type organization
+    ✔ Add search page @done (12/21/2019, 10:01:57 PM)
     ☐ Add single job get endpoint
     ☐ Add a single job view page
     ☐ setup layout for JobPosters and JobSeekers pages

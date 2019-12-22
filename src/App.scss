@@ -1,5 +1,5 @@
 
-.jumbotron {
+.main-jumbotron {
     background-color: #ffffff;
 
     padding: 5rem 0;
@@ -13,6 +13,11 @@
       font-size: $h2-font-size;
       margin: 1.5rem auto;
     }
+}
+
+.search-jumbotron {
+    background-color: #ffffff;
+    padding: 1rem 0;
 }
 
 .job {
