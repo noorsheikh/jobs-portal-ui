@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import { fetchJobs, searchJobs } from '../../actions';
 import { JobsState } from '../../models/States';
 import Job from '../../models/Job';
-import LoadingJobs from '../../components/LoadingJobs';
+import Loading from '../../components/Loading';
 import JumbotronTitle from '../../components/JumbotronTitle';
 import JumbotronSubtitle from '../../components/JumbotronSubtitle';
 import SearchForm from '../../components/SearchForm';
@@ -54,7 +54,7 @@ class Home extends React.Component<HomePropos, {}> {
                     <Row className="justify-content-md-center">
                         <Col lg={10} className={(isLoading ? 'text-center' : '')}>
                             {isLoading ? (
-                                <LoadingJobs />
+                                <Loading />
                             ) : (
                                 this.renderLatestJobs(latestJobs)
                             )}

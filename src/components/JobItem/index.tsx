@@ -3,6 +3,7 @@ import { Card, Row, Col, Button, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAsia, faMapMarkedAlt, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Job from '../../models/Job';
+import { NavLink } from 'react-router-dom';
 
 const JobItem: React.FC<Job> = (job: Job) => {
     return (
@@ -10,7 +11,7 @@ const JobItem: React.FC<Job> = (job: Job) => {
             <Card.Body>
                 <Row>
                     <Col xs={9}>
-                        <Card.Title>{job.title}</Card.Title>
+                        <Card.Title as={NavLink} to={`/jobs/${job.id}`}>{job.title}</Card.Title>
                     </Col>
                     <Col className="text-right">
                         <Card.Text>{job.salary}</Card.Text>
@@ -43,7 +44,7 @@ const JobItem: React.FC<Job> = (job: Job) => {
                         </Card.Text>
                     </Col>
                     <Col className="text-right">
-                        <Button variant="primary" size="sm" block>Apply</Button>
+                        <Button as={NavLink} to={`/jobs/${job.id}`} variant="primary" size="sm" block>Apply</Button>
                     </Col>
                 </Row>
             </Card.Body>

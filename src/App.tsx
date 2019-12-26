@@ -9,6 +9,7 @@ import JobPoster from './containers/JobPoster';
 import JobSeeker from './containers/JobSeeker';
 import NavigationBar from './components/NavigationBar';
 import Search from './containers/Search';
+import JobPost from './containers/JobPost';
 
 class App extends React.Component<{}, {}> {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component<{}, {}> {
           <Route path="/jobs-posters" render={() => <JobPoster />} />
           <Route path="/jobs-seekers" render={() => <JobSeeker />} />
           <Route path="/search" component={Search} />
+          <Route path="/jobs/:id" component={JobPost} />
         </Router>
       </Provider>
     )

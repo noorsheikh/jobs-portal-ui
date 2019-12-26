@@ -21,8 +21,8 @@ Jobs Portal:
     ✔ Enhance search functionality by search type organization @done (12/25/2019, 11:48:42 PM)
     ✔ Add search page @done (12/21/2019, 10:01:57 PM)
     ✔ Setup session storage for storing search keywords @done (12/25/2019, 11:48:59 PM)
-    ☐ Add single job get endpoint
-    ☐ Add a single job view page
+    ✔ Add single job get endpoint @done (12/26/2019, 2:10:24 AM)
+    ✔ Add a single job view page @done (12/26/2019, 2:10:26 AM)
     ☐ Setup layout for JobPosters and JobSeekers pages
     ☐ Setup register form for JobPosters
     ☐ Setup register form for JobSeekers

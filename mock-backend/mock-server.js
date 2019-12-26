@@ -16,6 +16,10 @@ module.exports = function startMockServer(port) {
         res.jsonp(data.jobs);
     });
 
+    server.get('/jobs/:id', (req, res) => {
+        res.jsonp(data.jobs.filter(job => job.id == req.params.id)[0]);
+    })
+
     server.post('/jobs/search', (req, res) => {
         const what = new RegExp(req.query.what, 'gi');
         const where = new RegExp(req.query.where, 'gi');

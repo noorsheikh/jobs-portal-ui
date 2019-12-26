@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import JobItem from '../../components/JobItem';
 import Job from '../../models/Job';
 import { JobsState } from '../../models/States';
-import LoadingJobs from '../../components/LoadingJobs';
+import Loading from '../../components/Loading';
 import SearchForm from '../../components/SearchForm';
 import { searchJobs } from '../../actions';
 import NoJobsFound from '../../components/NotJobsFound';
@@ -39,7 +39,7 @@ class Search extends React.Component<SearchProps, SearchState> {
                     <Row className="justify-content-md-center">
                         <Col lg={10} className={(isLoading ? 'text-center' : '')}>
                             {isLoading ? (
-                                <LoadingJobs />
+                                <Loading />
                             ) : (
                                 jobsSearchResult.length > 0 ? this.renderJobsSearchResult(jobsSearchResult)
                                     : <NoJobsFound />
