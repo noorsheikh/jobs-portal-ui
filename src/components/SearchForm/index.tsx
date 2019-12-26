@@ -5,6 +5,7 @@ import {
     Button,
     Form
 } from 'react-bootstrap';
+import Storage from '../../storage';
 
 interface SearchPropos {
     searchJobs: Function;
@@ -17,25 +18,42 @@ interface SearchState {
 }
 
 class SearchForm extends React.Component<SearchPropos, SearchState> {
+    storage = new Storage();
+    keywords = this.storage.getSearchKeywords();
+    state: SearchState = {
+        what: this.keywords ? this.keywords.what : '',
+        where: this.keywords ? this.keywords.where : ''
+    }
+
+    componentDidMount() {
+        this.props.searchJobs();
+    }
+
     handleChange = (e: any) => {
         const {name, value} = e.currentTarget;
         this.setState({[name]: value} as SearchState, () => {});
     }
 
     handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        const { what, where } = this.state;
-        this.props.searchJobs(what, where);
+        const storage = new Storage();
+        storage.addSearchKeyword(this.state);
+        this.props.searchJobs();
         e.preventDefault();
+
         if (this.props.history.location.pathname !== '/search') {
             this.props.history.push('/search');
         }
     }
 
     clearSearch = (): void => {
+        const storage = new Storage();
+        storage.clearSearchKeywords();
         window.location.reload(false);
     }
 
     render() {
+        const storage = new Storage();
+        const keywords = storage.getSearchKeywords();
         return (
             <Form onSubmit={this.handleSubmit} noValidate>
             <Form.Row>
@@ -47,6 +65,7 @@ class SearchForm extends React.Component<SearchPropos, SearchState> {
                         type="text"
                         placeholder="e.g. Programming, or Software Engineer"
                         name="what"
+                        defaultValue={keywords ? keywords.what : ''}
                         onChange={this.handleChange}
                     ></Form.Control>
                 </Form.Group>
@@ -57,6 +76,7 @@ class SearchForm extends React.Component<SearchPropos, SearchState> {
                         type="text"
                         placeholder="e.g. Kabul, Herat, or Tetra Tech"
                         name="where"
+                        defaultValue={keywords ? keywords.where : ''}
                         onChange={this.handleChange}
                     ></Form.Control>
                 </Form.Group>

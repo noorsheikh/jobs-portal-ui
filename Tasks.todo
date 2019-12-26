@@ -18,8 +18,13 @@ Jobs Portal:
     ✔ Setup new Search page for job JobItems @done (10/22/2019, 11:01:12 PM)
     ✔ React/Redux Support @done (10/14/2019, 10:14:09 PM)
     ✔ Redux support for jobs endpoint @done (10/14/2019, 10:14:12 PM)
-    ☐ Enhance search functionality by search type organization
+    ✔ Enhance search functionality by search type organization @done (12/25/2019, 11:48:42 PM)
     ✔ Add search page @done (12/21/2019, 10:01:57 PM)
+    ✔ Setup session storage for storing search keywords @done (12/25/2019, 11:48:59 PM)
     ☐ Add single job get endpoint
     ☐ Add a single job view page
-    ☐ setup layout for JobPosters and JobSeekers pages
+    ☐ Setup layout for JobPosters and JobSeekers pages
+    ☐ Setup register form for JobPosters
+    ☐ Setup register form for JobSeekers
+    ☐ Setup login form for JobPosters
+    ☐ Setup login form for JobSeekers

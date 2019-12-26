@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Dispatch } from 'redux';
 import Job from '../../models/Job';
+import Storage from '../../storage';
 
 export enum SearchJobsActionTypes {
     SEARCH_JOBS_PENDING = 'SEARCH_JOBS_PENDING',
@@ -42,10 +43,12 @@ const searchJobsError = (error: string): JobsError => {
     }
 }
 
-export const searchJobs = (what: string, where: string) => async (dispatch: Dispatch) => {
+export const searchJobs = () => async (dispatch: Dispatch) => {
     dispatch(searchJobsPending());
     try {
-        const jobs = await axios.post(`http://localhost:3030/jobs/search`, null, { params: {what, where} });
+        const storage = new Storage();
+        const keywords = storage.getSearchKeywords();
+        const jobs = await axios.post(`http://localhost:3030/jobs/search`, null, { params: keywords });
 
         setTimeout(() => {
             dispatch(searchJobsSuccess(jobs.data));
