@@ -16,9 +16,7 @@ class App extends React.Component<{}, {}> {
     return (
       <Provider store={store}>
         <Router>
-          <Container>
-            <NavigationBar />
-          </Container>
+          <NavigationBar />
           <Route path="/" exact component={Home} />
           <Route path="/jobs-posters" render={() => <JobPoster />} />
           <Route path="/jobs-seekers" render={() => <JobSeeker />} />

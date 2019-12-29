@@ -16,9 +16,11 @@ export const initialState: JobState = {
         description: '',
         company: '',
         location: '',
-        type: '',
-        salary: '',
-        skills: []
+        metadata: {
+            type: '',
+            salary: '',
+            skills: []
+        }
     },
     error: ''
 };

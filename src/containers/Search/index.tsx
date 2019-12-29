@@ -37,7 +37,7 @@ class Search extends React.Component<SearchProps, SearchState> {
                 </Jumbotron>
                 <Container>
                     <Row className="justify-content-md-center">
-                        <Col lg={10} className={(isLoading ? 'text-center' : '')}>
+                        <Col lg={12} className={(isLoading ? 'text-center' : '')}>
                             {isLoading ? (
                                 <Loading />
                             ) : (

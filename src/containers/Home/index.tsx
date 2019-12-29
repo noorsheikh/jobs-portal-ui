@@ -51,8 +51,8 @@ class Home extends React.Component<HomePropos, {}> {
                     </Container>
                 </Jumbotron>
                 <Container>
-                    <Row className="justify-content-md-center">
-                        <Col lg={10} className={(isLoading ? 'text-center' : '')}>
+                    <Row>
+                        <Col lg={12} className={(isLoading ? 'text-center' : '')}>
                             {isLoading ? (
                                 <Loading />
                             ) : (

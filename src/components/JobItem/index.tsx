@@ -14,7 +14,7 @@ const JobItem: React.FC<Job> = (job: Job) => {
                         <Card.Title as={NavLink} to={`/jobs/${job.id}`}>{job.title}</Card.Title>
                     </Col>
                     <Col className="text-right">
-                        <Card.Text>{job.salary}</Card.Text>
+                        <Card.Text>{job.metadata.salary}</Card.Text>
                     </Col>
                 </Row>
                 <Row>
@@ -30,7 +30,7 @@ const JobItem: React.FC<Job> = (job: Job) => {
                             </span>
                             <span className="job-meta">
                                 <FontAwesomeIcon icon={faBuilding} size="xs" className="job-meta__icon" />
-                                {job.type}
+                                {job.metadata.type}
                             </span>
                         </Card.Text>
                     </Col>
@@ -38,7 +38,7 @@ const JobItem: React.FC<Job> = (job: Job) => {
                 <Row className="row-spacing">
                     <Col xs={10}>
                         <Card.Text>
-                            {job.skills && job.skills.map((skill, index) => {
+                            {job.metadata.skills && job.metadata.skills.map((skill, index) => {
                                 return <Badge key={index + 1} pill variant="secondary" className="job-skill">{skill}</Badge>
                             })}
                         </Card.Text>
