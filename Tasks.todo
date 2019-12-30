@@ -28,3 +28,5 @@ Jobs Portal:
     ☐ Setup register form for JobSeekers
     ☐ Setup login form for JobPosters
     ☐ Setup login form for JobSeekers
+    ✔ Job categories api and redux action and reducer @done (12/29/2019, 11:51:59 PM)
+    ☐ Job categories carousel on home page

@@ -43,5 +43,38 @@ module.exports = () => {
         }
     ];
 
+    data.categories = [
+        {
+            "id": 1,
+            "name": "Accounting/Finance",
+            "description": "",
+            "total": 25
+        },
+        {
+            "id": 1,
+            "name": "Agriculture",
+            "description": "",
+            "total": 12
+        },
+        {
+            "id": 1,
+            "name": "Business Development",
+            "description": "",
+            "total": 9
+        },
+        {
+            "id": 1,
+            "name": "Customer Service",
+            "description": "",
+            "total": 0
+        },
+        {
+            "id": 1,
+            "name": "IT/Engineering",
+            "description": "",
+            "total": 16
+        }
+    ];
+
     return data;
 }

@@ -1,4 +1,5 @@
 import Job from '../Job';
+import Category from '../Category';
 
 export interface JobsState {
     pending: boolean;
@@ -9,5 +10,11 @@ export interface JobsState {
 export interface JobState {
     pending: boolean;
     job: Job;
+    error: string;
+}
+
+export interface CategoriesState {
+    pending: boolean;
+    categories: Category[];
     error: string;
 }

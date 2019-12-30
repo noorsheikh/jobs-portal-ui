@@ -40,6 +40,10 @@ module.exports = function startMockServer(port) {
         res.json(response);
     });
 
+    server.get('/categories', (req, res) => {
+        res.jsonp(data.categories);
+    })
+
     server.use(router);
     server.listen(port);
 };
