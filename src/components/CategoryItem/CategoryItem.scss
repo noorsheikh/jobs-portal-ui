@@ -1,0 +1,36 @@
+.category-item {
+    padding: 1.5rem;
+    border: 1px solid $white !important;
+    border-radius: 0;
+
+    &:hover {
+        box-shadow: 5px 5px 20px $tertiary;
+        border: 1px solid $tertiary !important;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin: .5rem 1rem;
+        width: 2em !important;
+        height: 2em !important;
+        border: 1px solid $tertiary;
+        padding: .5em;
+        border-radius: 1rem;
+        color: $primary;
+    }
+
+    &__title {
+        padding: .3rem 1rem;
+        font-size: $font-size-base * 1.2;
+        font-weight: $font-weight-base + 200;
+        color: $black;
+        height: 2.5rem;
+    }
+
+    &__total {
+        font-size: $font-size-base * .8;
+        font-weight: $font-weight-base + 200;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+    }
+}

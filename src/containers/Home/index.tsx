@@ -4,6 +4,7 @@ import {
     Row,
     Col,
     Jumbotron,
+    CardGroup,
 } from 'react-bootstrap';
 import JobItem from '../../components/JobItem';
 import { connect } from 'react-redux';
@@ -15,6 +16,7 @@ import JumbotronTitle from '../../components/JumbotronTitle';
 import JumbotronSubtitle from '../../components/JumbotronSubtitle';
 import SearchBar from '../../components/SearchBar';
 import Category from '../../models/Category';
+import CategoryItem from '../../components/CategoryItem';
 
 interface HomePropos {
     jobs: JobsState;
@@ -37,7 +39,9 @@ class Home extends React.Component<HomePropos, {}> {
     }
 
     renderCategories = (categories: Category[]) => {
-        console.log(categories);
+        return categories.map(category => {
+            return <CategoryItem {...category} />
+        })
     }
 
     renderLatestJobs = (jobs: Job[]) => {
@@ -60,6 +64,20 @@ class Home extends React.Component<HomePropos, {}> {
                         <SearchBar searchJobs={searchJobs} history={history} />
                     </Container>
                 </Jumbotron>
+                <Container>
+                    <Row>
+                        <Col lg={12}>
+                            <h1 className="section-header">
+                                Explore<br />by <span className="text-primary"><u>category</u></span>
+                            </h1>
+                        </Col>
+                        <Col lg={12}>
+                            <CardGroup>
+                                {this.renderCategories(categories)}
+                            </CardGroup>
+                        </Col>
+                    </Row>
+                </Container>
                 <Container>
                     <Row>
                         <Col lg={12} className={(isLoading ? 'text-center' : '')}>

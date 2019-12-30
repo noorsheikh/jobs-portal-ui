@@ -12,6 +12,7 @@
 $body-bg: #ffffff;
 $primary: #7a6a53;
 $secondary: #948c75;
+$tertiary: #d5ded9;
 $font-family-sans-serif: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 1.5;
@@ -27,6 +28,7 @@ $h6-font-size: $font-size-base * .8;
 @import "./components/NavigationBar/NavigationBar.scss";
 @import "./components/JumbotronTitle/JumbotronTitle.scss";
 @import "./components/SearchBar/SearchBar.scss";
+@import "./components/CategoryItem/CategoryItem.scss";
 
 @import "./App.scss";
 @import "./containers/JobPost/JobPost.scss";

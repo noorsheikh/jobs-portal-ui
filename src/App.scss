@@ -1,5 +1,5 @@
 .main-jumbotron {
-    background-color: #d5ded9;
+    background-color: $tertiary;
     padding: 5rem 0 0;
 }
 
@@ -33,6 +33,12 @@
 
 .btn-space {
     margin: 0 .5rem;
+}
+
+.section-header {
+    font-family: 'Courgette', cursive, sans-serif;
+    font-size: $h1-font-size * 1.2;
+    margin: 5rem auto 1rem auto;
 }
 
 textarea,

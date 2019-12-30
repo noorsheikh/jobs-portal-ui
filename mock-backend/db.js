@@ -48,32 +48,37 @@ module.exports = () => {
             "id": 1,
             "name": "Accounting/Finance",
             "description": "",
-            "total": 25
+            "total": 25,
+            "icon": "chart-line"
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Agriculture",
             "description": "",
-            "total": 12
+            "total": 12,
+            "icon": "tractor"
         },
         {
-            "id": 1,
+            "id": 3,
             "name": "Business Development",
             "description": "",
-            "total": 9
+            "total": 1,
+            "icon": "layer-group"
         },
         {
-            "id": 1,
+            "id": 4,
             "name": "Customer Service",
             "description": "",
-            "total": 0
+            "total": 0,
+            "icon": "headset"
         },
-        {
-            "id": 1,
-            "name": "IT/Engineering",
-            "description": "",
-            "total": 16
-        }
+        // {
+        //     "id": 5,
+        //     "name": "IT/Engineering",
+        //     "description": "",
+        //     "total": 16,
+        //     "icon": "dice-d20"
+        // }
     ];
 
     return data;

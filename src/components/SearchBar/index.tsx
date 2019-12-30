@@ -70,7 +70,7 @@ class SearchBar extends React.Component<SearchPropos, SearchState> {
                                 <Form.Control
                                     className="search-bar__text"
                                     type="text"
-                                    placeholder="job title or keyword"
+                                    placeholder="Job title or keyword"
                                     name="what"
                                     defaultValue={keywords ? keywords.what : ''}
                                     onChange={this.handleChange}
@@ -88,7 +88,7 @@ class SearchBar extends React.Component<SearchPropos, SearchState> {
                                 <Form.Control
                                     className="search-bar__text"
                                     type="text"
-                                    placeholder="location or company"
+                                    placeholder="Location or company"
                                     name="where"
                                     defaultValue={keywords ? keywords.where : ''}
                                     onChange={this.handleChange}
