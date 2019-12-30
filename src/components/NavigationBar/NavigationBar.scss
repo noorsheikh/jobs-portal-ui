@@ -1,5 +1,17 @@
 .navbar {
+    background-color: #d5ded9;
+
     &__logo {
-        color: #ffffff !important;
+        font-family: 'Squada One', cursive, sans-serif;
+        font-size: $font-size-base * 2;
+        color: #7a6a53 !important;
+    }
+
+    &__auth-nav {
+        &--item {
+            font-weight: bold;
+            font-size: $font-size-base * .8;
+            color: #000000 !important;
+        }
     }
 }

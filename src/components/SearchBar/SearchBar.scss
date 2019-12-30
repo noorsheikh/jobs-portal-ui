@@ -1,0 +1,28 @@
+.search-bar {
+    position: relative;
+    background-color: #ffffff;
+    top: 2rem;
+    padding: .8rem;
+    border: 1px solid #e7e7e7;
+
+    &__text {
+        height: calc(2em + 1rem + 2px);
+        font-size: $font-size-base;
+        padding-left: 0;
+        border: none;
+    }
+
+    &__icon {
+        background-color: $white;
+        border: none;
+
+        &--color { color: $primary; }
+    }
+
+    &__search-btn {
+        font-size: $font-size-base;
+        padding: .8rem 1rem;
+    }
+
+    &__divider { border-right: 1px solid #e7e7e7; }
+}

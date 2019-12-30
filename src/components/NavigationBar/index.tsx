@@ -4,17 +4,17 @@ import { NavLink } from 'react-router-dom';
 
 const NavigationBar: React.FC = () => {
     return (
-        <Navbar collapseOnSelect expand='lg' className="navbar bg-primary">
+        <Navbar collapseOnSelect expand='lg' className="navbar">
             <Container>
-                <Navbar.Brand className="navbar__logo" as={NavLink} to='/'>Jobs Portal</Navbar.Brand>
+                <Navbar.Brand className="navbar__logo" as={NavLink} to='/'>jobs portal</Navbar.Brand>
                 <Navbar.Toggle area-controls='responsive-navbar-nav' />
-                <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
+                <Navbar.Collapse className='navbar__auth-nav justify-content-end' id='responsive-navbar-nav'>
                     <Nav>
-                    <Nav.Link as={NavLink} to='/jobs-posters' exact>
-                        For Job Posters
+                    <Nav.Link as={NavLink} className='navbar__auth-nav--item' to='/jobs-seekers' exact>
+                        Sign In
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to='/jobs-seekers' exact>
-                        For Job Seekers
+                    <Nav.Link as={NavLink} className='navbar__auth-nav--item' to='/jobs-posters' exact>
+                        For Employers
                     </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

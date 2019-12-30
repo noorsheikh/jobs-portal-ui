@@ -1,17 +1,6 @@
 .main-jumbotron {
-    background-color: #ffffff;
-
-    padding: 5rem 0;
-    &__title {
-      font-size: $h1-font-size * 1.5;
-      font-weight: $font-weight-bold + 200;
-      margin: 1rem auto;
-    }
-
-    &__sub-title {
-      font-size: $h2-font-size;
-      margin: 1.5rem auto;
-    }
+    background-color: #d5ded9;
+    padding: 5rem 0 0;
 }
 
 .search-jumbotron {
@@ -44,4 +33,40 @@
 
 .btn-space {
     margin: 0 .5rem;
+}
+
+textarea,
+input,
+text,
+button,
+label,
+.btn
+{
+    border-radius: 0;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

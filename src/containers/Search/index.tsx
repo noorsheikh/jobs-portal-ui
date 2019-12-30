@@ -5,7 +5,7 @@ import JobItem from '../../components/JobItem';
 import Job from '../../models/Job';
 import { JobsState } from '../../models/States';
 import Loading from '../../components/Loading';
-import SearchForm from '../../components/SearchForm';
+import SearchBar from '../../components/SearchBar';
 import { searchJobs } from '../../actions';
 import NoJobsFound from '../../components/NotJobsFound';
 
@@ -32,7 +32,7 @@ class Search extends React.Component<SearchProps, SearchState> {
             <React.Fragment>
                 <Jumbotron className="search-jumbotron">
                     <Container>
-                        <SearchForm searchJobs={searchJobs} history={history} />
+                        <SearchBar searchJobs={searchJobs} history={history} />
                     </Container>
                 </Jumbotron>
                 <Container>

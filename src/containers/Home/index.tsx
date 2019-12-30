@@ -13,7 +13,7 @@ import Job from '../../models/Job';
 import Loading from '../../components/Loading';
 import JumbotronTitle from '../../components/JumbotronTitle';
 import JumbotronSubtitle from '../../components/JumbotronSubtitle';
-import SearchForm from '../../components/SearchForm';
+import SearchBar from '../../components/SearchBar';
 
 interface HomePropos {
     jobs: JobsState;
@@ -47,7 +47,7 @@ class Home extends React.Component<HomePropos, {}> {
                     <Container>
                         <JumbotronTitle />
                         <JumbotronSubtitle />
-                        <SearchForm searchJobs={searchJobs} history={history} />
+                        <SearchBar searchJobs={searchJobs} history={history} />
                     </Container>
                 </Jumbotron>
                 <Container>
