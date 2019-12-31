@@ -2,11 +2,14 @@
     padding: 1.5rem;
     border: 1px solid $white !important;
     border-radius: 0;
+    color: $black;
 
     &:hover {
+        background: $tertiary !important;
         box-shadow: 5px 5px 20px $tertiary;
         border: 1px solid $tertiary !important;
         cursor: pointer;
+        color: $white !important;
     }
 
     &__icon {
@@ -16,15 +19,13 @@
         border: 1px solid $tertiary;
         padding: .5em;
         border-radius: 1rem;
-        color: $primary;
     }
 
     &__title {
         padding: .3rem 1rem;
-        font-size: $font-size-base * 1.2;
+        font-size: $font-size-base * 1.1;
         font-weight: $font-weight-base + 200;
-        color: $black;
-        height: 2.5rem;
+        height: 2rem;
     }
 
     &__total {

@@ -4,7 +4,7 @@
 }
 
 .search-jumbotron {
-    background-color: #ffffff;
+    background-color: $tertiary;
     padding: 1rem 0;
 }
 
@@ -36,9 +36,30 @@
 }
 
 .section-header {
-    font-family: 'Courgette', cursive, sans-serif;
-    font-size: $h1-font-size * 1.2;
     margin: 5rem auto 1rem auto;
+
+    &__title {
+        font-family: 'Courgette', cursive, sans-serif;
+        font-size: $h1-font-size * 1.1;
+    }
+
+    &__button {
+        background-color: $primary;
+        border-color: $primary;
+        color: $gray-200;
+        font-size: $font-size-base * .9;
+        font-weight: $font-weight-base + 200;
+        border-radius: .3rem !important;
+        padding: .5rem 2rem;
+
+        &:hover {
+            background-color: $primary;
+            color: $gray-500;
+            box-shadow: 1px 1px 5px $gray-700;
+            border: 1px solid $primary !important;
+            cursor: pointer;
+        }
+    }
 }
 
 textarea,

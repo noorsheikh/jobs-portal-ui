@@ -5,8 +5,9 @@ import {
     Col,
     Jumbotron,
     CardGroup,
+    CardColumns,
+    Button,
 } from 'react-bootstrap';
-import JobItem from '../../components/JobItem';
 import { connect } from 'react-redux';
 import { fetchJobs, searchJobs, fetchCategories } from '../../actions';
 import { JobsState, CategoriesState } from '../../models/States';
@@ -17,6 +18,7 @@ import JumbotronSubtitle from '../../components/JumbotronSubtitle';
 import SearchBar from '../../components/SearchBar';
 import Category from '../../models/Category';
 import CategoryItem from '../../components/CategoryItem';
+import JobCard from '../../components/JobCard';
 
 interface HomePropos {
     jobs: JobsState;
@@ -40,13 +42,13 @@ class Home extends React.Component<HomePropos, {}> {
 
     renderCategories = (categories: Category[]) => {
         return categories.map(category => {
-            return <CategoryItem {...category} />
+            return <CategoryItem {...category} key={category.id} />
         })
     }
 
     renderLatestJobs = (jobs: Job[]) => {
         return jobs.map(job => {
-            return <JobItem {...job} key={job.id} />;
+            return <JobCard {...job} key={job.id} />;
         })
     }
 
@@ -66,8 +68,8 @@ class Home extends React.Component<HomePropos, {}> {
                 </Jumbotron>
                 <Container>
                     <Row>
-                        <Col lg={12}>
-                            <h1 className="section-header">
+                        <Col lg={12} className="section-header">
+                            <h1 className="section-header__title">
                                 Explore<br />by <span className="text-primary"><u>category</u></span>
                             </h1>
                         </Col>
@@ -80,12 +82,26 @@ class Home extends React.Component<HomePropos, {}> {
                 </Container>
                 <Container>
                     <Row>
+                        <Col lg={12}  className="section-header">
+                            <Row>
+                                <Col lg={10}>
+                                    <h1 className="section-header__title">
+                                        Latest<br /><span className="text-primary"><u>jobs</u></span> Listings
+                                    </h1>
+                                </Col>
+                                <Col lg={2}>
+                                    <Button className="section-header__button" size="lg">List all jobs</Button>
+                                </Col>
+                            </Row>
+                        </Col>
                         <Col lg={12} className={(isLoading ? 'text-center' : '')}>
-                            {isLoading ? (
-                                <Loading />
-                            ) : (
-                                this.renderLatestJobs(latestJobs)
-                            )}
+                            <CardColumns>
+                                {isLoading ? (
+                                    <Loading />
+                                ) : (
+                                    this.renderLatestJobs(latestJobs)
+                                )}
+                            </CardColumns>
                         </Col>
                     </Row>
                 </Container>

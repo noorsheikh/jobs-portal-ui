@@ -23,10 +23,10 @@ Jobs Portal:
     ✔ Setup session storage for storing search keywords @done (12/25/2019, 11:48:59 PM)
     ✔ Add single job get endpoint @done (12/26/2019, 2:10:24 AM)
     ✔ Add a single job view page @done (12/26/2019, 2:10:26 AM)
-    ☐ Setup layout for JobPosters and JobSeekers pages
-    ☐ Setup register form for JobPosters
-    ☐ Setup register form for JobSeekers
-    ☐ Setup login form for JobPosters
-    ☐ Setup login form for JobSeekers
     ✔ Job categories api and redux action and reducer @done (12/29/2019, 11:51:59 PM)
-    ☐ Job categories carousel on home page
+    ✔ Job categories on home page @done (12/31/2019, 1:20:07 AM)
+    ✔ Enhance homepage latest jobs section @done (12/31/2019, 1:19:53 AM)
+    ☐ Setup layout for sign in page
+    ☐ Setup layout for sign up page
+    ☐ Setup layout for employers page
+
