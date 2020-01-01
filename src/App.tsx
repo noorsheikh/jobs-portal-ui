@@ -19,7 +19,7 @@ class App extends React.Component<{}, {}> {
           <Route path="/" exact component={Home} />
           <Route path="/jobs-posters" render={() => <JobPoster />} />
           <Route path="/jobs-seekers" render={() => <JobSeeker />} />
-          <Route path="/search" component={Search} />
+          <Route path="/jobs" component={Search} />
           <Route path="/jobs/:id" component={JobPost} />
         </Router>
       </Provider>

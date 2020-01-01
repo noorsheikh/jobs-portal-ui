@@ -8,7 +8,6 @@ import { NavLink } from 'react-router-dom';
 const JobCard: React.FC<Job> = (job: Job) => (
     <Col lg={4} className="job-card">
         <Card className="job-card__body">
-            <div >
             <Card.Title as={NavLink} to={`/jobs/${job.id}`} className="job-card__title">{job.title}</Card.Title>
             <Card.Subtitle className="job-card__company">
                 <FontAwesomeIcon icon={faBuilding} size="sm" className="job-card__company--icon" /> {job.company}
@@ -21,7 +20,6 @@ const JobCard: React.FC<Job> = (job: Job) => (
                     return <Badge key={index + 1} pill variant="secondary" className="job-card__skills--item">{skill}</Badge>
                 })}
             </Card.Text>
-            </div>
         </Card>
     </Col>
 );

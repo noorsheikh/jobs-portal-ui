@@ -42,8 +42,8 @@ class SearchBar extends React.Component<SearchPropos, SearchState> {
         this.props.searchJobs();
         e.preventDefault();
 
-        if (this.props.history.location.pathname !== '/search') {
-            this.props.history.push('/search');
+        if (this.props.history.location.pathname !== '/jobs') {
+            this.props.history.push('/jobs');
         }
     }
 

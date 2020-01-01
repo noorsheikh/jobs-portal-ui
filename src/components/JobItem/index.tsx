@@ -1,54 +1,36 @@
 import React from 'react';
-import { Card, Row, Col, Button, Badge } from 'react-bootstrap';
+import { Card, Row, Col, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeAsia, faMapMarkedAlt, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Job from '../../models/Job';
 import { NavLink } from 'react-router-dom';
 
 const JobItem: React.FC<Job> = (job: Job) => {
     return (
-        <Card className="job">
-            <Card.Body>
+        <Col className="job-item">
+            <Card className="job-card__body">
                 <Row>
-                    <Col xs={9}>
-                        <Card.Title as={NavLink} to={`/jobs/${job.id}`}>{job.title}</Card.Title>
+                    <Col lg={6}>
+                        <Card.Title as={NavLink} to={`/jobs/${job.id}`} className="job-card__title">{job.title}</Card.Title>
+                        <Card.Subtitle className="job-card__company">
+                            <FontAwesomeIcon icon={faBuilding} size="sm" className="job-card__company--icon" /> {job.company}
+                        </Card.Subtitle>
                     </Col>
-                    <Col className="text-right">
-                        <Card.Text>{job.metadata.salary}</Card.Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Card.Text>
-                            <span className="job-meta">
-                                <FontAwesomeIcon icon={faGlobeAsia} size="xs" className="job-meta__icon" />
-                                {job.company}
-                            </span>
-                            <span className="job-meta">
-                                <FontAwesomeIcon icon={faMapMarkedAlt} size="xs" className="job-meta__icon" />
-                                {job.location}
-                            </span>
-                            <span className="job-meta">
-                                <FontAwesomeIcon icon={faBuilding} size="xs" className="job-meta__icon" />
-                                {job.metadata.type}
-                            </span>
+                    <Col lg={3}>
+                        <Card.Text className="job-card__type-location">
+                            {job.metadata.type} <span className="job-card__type-location--in">in</span> {job.location},<br /><span className="job-card__post-time">3 days ago</span>
                         </Card.Text>
                     </Col>
-                </Row>
-                <Row className="row-spacing">
-                    <Col xs={10}>
-                        <Card.Text>
-                            {job.metadata.skills && job.metadata.skills.map((skill, index) => {
-                                return <Badge key={index + 1} pill variant="secondary" className="job-skill">{skill}</Badge>
-                            })}
-                        </Card.Text>
-                    </Col>
-                    <Col className="text-right">
-                        <Button as={NavLink} to={`/jobs/${job.id}`} variant="primary" size="sm" block>Apply</Button>
+                    <Col lg={3}>
+                    <Card.Text className="job-card__skills">
+                        {job.metadata.skills && job.metadata.skills.map((skill, index) => {
+                            return <Badge key={index + 1} pill variant="secondary" className="job-card__skills--item">{skill}</Badge>
+                        })}
+                    </Card.Text>
                     </Col>
                 </Row>
-            </Card.Body>
-        </Card>
+            </Card>
+        </Col>
     )
 }
 

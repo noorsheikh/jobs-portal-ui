@@ -1,0 +1,53 @@
+.job-item {
+    padding: .3rem;
+
+    &__body {
+        padding: .5rem;
+        border: 1px solid $gray-200;
+
+        &:hover {
+            box-shadow: 1px 1px 5px $gray-200;
+            border: 1px solid $gray-200 !important;
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        padding: .5rem 1rem 0;
+        font-size: $font-size-base;
+        font-weight: $font-weight-base + 200;
+        color: $black;
+
+        &:hover { text-decoration: none; }
+    }
+
+    &__company {
+        font-size: $font-size-base * .9;
+        padding: .8rem 1rem;
+        color: $gray-700;
+    }
+
+    &__type-location {
+        font-size: $font-size-base * .8;
+        font-weight: $font-weight-base + 200;
+        padding: .3rem 1rem;
+        margin-bottom: .5rem;
+
+        &--in { color: $gray-700; }
+    }
+
+    &__post-time { color: $gray-600; }
+
+    &__skills {
+        padding: .5rem 1rem;
+
+        &--item {
+            background-color: $tertiary;
+            font-size: $font-size-base * .6;
+            color: $gray-800;
+            margin-right: .3rem;
+            padding: .5rem .8rem;
+            border-radius: .5rem;
+        }
+    }
+}

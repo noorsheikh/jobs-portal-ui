@@ -18,6 +18,8 @@ import SearchBar from '../../components/SearchBar';
 import Category from '../../models/Category';
 import CategoryItem from '../../components/CategoryItem';
 import JobCard from '../../components/JobCard';
+import { NavLink } from 'react-router-dom';
+import Storage from '../../storage';
 
 interface HomePropos {
     jobs: JobsState;
@@ -49,6 +51,11 @@ class Home extends React.Component<HomePropos, {}> {
         return jobs.map((job, index) => {
             return (index < 6) ? <JobCard {...job} key={job.id} /> : undefined;
         })
+    }
+
+    clearSearchResult = () => {
+        const storage = new Storage();
+        storage.clearSearchKeywords();
     }
 
     render() {
@@ -93,7 +100,7 @@ class Home extends React.Component<HomePropos, {}> {
                                     </h1>
                                 </Col>
                                 <Col lg={2}>
-                                    <Button className="section-header__button" size="lg">List all jobs</Button>
+                                    <Button as={NavLink} to="/jobs" className="section-header__button" size="lg" onClick={this.clearSearchResult}>List all jobs</Button>
                                 </Col>
                             </Row>
                         </Col>
