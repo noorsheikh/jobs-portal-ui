@@ -5,7 +5,6 @@ import {
     Col,
     Jumbotron,
     CardGroup,
-    CardColumns,
     Button,
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
@@ -41,14 +40,14 @@ class Home extends React.Component<HomePropos, {}> {
     }
 
     renderCategories = (categories: Category[]) => {
-        return categories.map(category => {
-            return <CategoryItem {...category} key={category.id} />
+        return categories.map((category, index) => {
+            return (index < 4) ? <CategoryItem {...category} key={category.id} /> : undefined;
         })
     }
 
     renderLatestJobs = (jobs: Job[]) => {
-        return jobs.map(job => {
-            return <JobCard {...job} key={job.id} />;
+        return jobs.map((job, index) => {
+            return (index < 6) ? <JobCard {...job} key={job.id} /> : undefined;
         })
     }
 
@@ -69,9 +68,13 @@ class Home extends React.Component<HomePropos, {}> {
                 <Container>
                     <Row>
                         <Col lg={12} className="section-header">
-                            <h1 className="section-header__title">
-                                Explore<br />by <span className="text-primary"><u>category</u></span>
-                            </h1>
+                            <Row>
+                                <Col lg={12}>
+                                    <h1 className="section-header__title">
+                                        Explore<br />by <span className="text-primary"><u>category</u></span>
+                                    </h1>
+                                </Col>
+                            </Row>
                         </Col>
                         <Col lg={12}>
                             <CardGroup>
@@ -95,13 +98,13 @@ class Home extends React.Component<HomePropos, {}> {
                             </Row>
                         </Col>
                         <Col lg={12} className={(isLoading ? 'text-center' : '')}>
-                            <CardColumns>
+                            <CardGroup>
                                 {isLoading ? (
                                     <Loading />
                                 ) : (
                                     this.renderLatestJobs(latestJobs)
                                 )}
-                            </CardColumns>
+                            </CardGroup>
                         </Col>
                     </Row>
                 </Container>

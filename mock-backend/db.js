@@ -37,7 +37,7 @@ module.exports = () => {
             "location": "Kabul",
             "metadata": {
                 "salary": "6000 - 12000 $",
-                "skills": ["JavaScript", "React/Redux", "Bootstrap"],
+                "skills": ["M&E", "Monitoring", "Evaluation"],
                 "type": "Full Time"
             }
         },
@@ -51,6 +51,42 @@ module.exports = () => {
                 "salary": "3000 - 6000 $",
                 "skills": ["Budgeting", "Accounting"],
                 "type": "Contract"
+            }
+        },
+        {
+            "id": 5,
+            "title": "Call Center Office",
+            "description": "<h2>About ${job.company}<\/h2><p><strong>[Intro Paragraph]&nbsp;<\/strong>Begin your listing with an introductory paragraph that tells prospective managers a little bit about your firm and your unique working environment. Just one or three sentences can cater your recruiting pitch to the ideal candidate, and this your chance to set your company apart from the competition.<\/p><p><strong>Account Manager Job Responsibilities:<\/strong><\/p><ul><li>Develops new business by analyzing account potential; initiating, developing, and closing sales; recommending new applications and sales strategies.<\/li><li>Identifies potential in accounts by studying current business; interviewing key customer personnel and company personnel who have worked with customer; identifying and evaluating additional needs; analyzing opportunities.<\/li><li>Initiates sales process by building relationships; qualifying potential; scheduling appointments.<\/li><li>Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services.<\/li><li>Develops new applications by preparing specifications; conferring with product engineering.<\/li><li>Closes sales by overcoming objections; preparing contracts.<\/li><li>Contributes information to sales strategies by evaluating current product results; identifying needs to be filled; monitoring competitive products; analyzing and relaying customer reactions.<\/li><li>Updates job knowledge by participating in educational opportunities; reading professional publications; maintaining personal networks; participating in professional organizations.<\/li><li>Enhances department and organization reputation by accepting ownership for accomplishing new and different requests; exploring opportunities to add value to job accomplishments.<\/li><\/ul><p><strong>[Work Hours &amp; Benefits]<\/strong>&nbsp;This is a great place to include details about your firm&rsquo;s&nbsp;<strong>working hours and benefits<\/strong>. Tell account managers about telecommuting options, flexible hours or work-week structures, and any travel requirements. You can also highlight any benefits your firm brings to the table, like profit-sharing, paid parental leave, or childcare reimbursement.<\/p><p><strong>Account Manager Skills and Qualifications:<\/strong><\/p><ul><li>Client base<\/li><li>Establishing partnerships\/alliances<\/li><li>Prospecting skills<\/li><li>Meeting sales goals<\/li><li>Fostering teamwork<\/li><li>Planning<\/li><li>Building relationships<\/li><li>People Skills<\/li><li>Initiative<\/li><li>Customer focus<\/li><li>Emphasizing excellence<\/li><\/ul><p><strong>Education and Experience Requirements:<\/strong><\/p><ul><li>Bachelor&rsquo;s or master&rsquo;s degree with a concentration in marketing, promotions, advertising sales, or business administration preferred<\/li><li>Industry experience a plus<\/li><li>3+ years sales experience exceeding quotas<\/li><li>Stable employment history<\/li><\/ul><p><strong>[Call to Action]<\/strong>&nbsp;Now you need to turn interested parties into actual applicants. The best performing job descriptions them know exactly how to apply with a well-crafted&nbsp;<strong>call to action<\/strong>. Give prospective managers specific details on resume or application submissions, or tell them to click on the &ldquo;apply&rdquo; button at the top of the job listing.<\/p><p>&nbsp;<\/p><p><strong>Happy with your account manager job description?<\/strong><\/p><p>You&rsquo;ve built the perfect listing &mdash; now take your search for the best account executive to the next level. Monster job ads provide a wide range of monthly plans to choose from, allowing your company to scale up, phase down, and cancel your search at any time. Find the plan that best fits your company and you&rsquo;ll gain access to SearchMonster, our robust candidate engagement platform, at no extra charge.&nbsp;<a href=\"https:\/\/hiring.monster.com\/solutions\/pricing.aspx\">Get started now<\/a>!<\/p>",
+            "company": "Ministry of Finance",
+            "location": "Kabul",
+            "metadata": {
+                "salary": "1000 - 1500 $",
+                "skills": ["Customer Care"],
+                "type": "Contract"
+            }
+        },
+        {
+            "id": 6,
+            "title": "Structure Engineer",
+            "description": "<h2>About ${job.company}<\/h2><p><strong>[Intro Paragraph]&nbsp;<\/strong>Begin your listing with an introductory paragraph that tells prospective managers a little bit about your firm and your unique working environment. Just one or three sentences can cater your recruiting pitch to the ideal candidate, and this your chance to set your company apart from the competition.<\/p><p><strong>Account Manager Job Responsibilities:<\/strong><\/p><ul><li>Develops new business by analyzing account potential; initiating, developing, and closing sales; recommending new applications and sales strategies.<\/li><li>Identifies potential in accounts by studying current business; interviewing key customer personnel and company personnel who have worked with customer; identifying and evaluating additional needs; analyzing opportunities.<\/li><li>Initiates sales process by building relationships; qualifying potential; scheduling appointments.<\/li><li>Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services.<\/li><li>Develops new applications by preparing specifications; conferring with product engineering.<\/li><li>Closes sales by overcoming objections; preparing contracts.<\/li><li>Contributes information to sales strategies by evaluating current product results; identifying needs to be filled; monitoring competitive products; analyzing and relaying customer reactions.<\/li><li>Updates job knowledge by participating in educational opportunities; reading professional publications; maintaining personal networks; participating in professional organizations.<\/li><li>Enhances department and organization reputation by accepting ownership for accomplishing new and different requests; exploring opportunities to add value to job accomplishments.<\/li><\/ul><p><strong>[Work Hours &amp; Benefits]<\/strong>&nbsp;This is a great place to include details about your firm&rsquo;s&nbsp;<strong>working hours and benefits<\/strong>. Tell account managers about telecommuting options, flexible hours or work-week structures, and any travel requirements. You can also highlight any benefits your firm brings to the table, like profit-sharing, paid parental leave, or childcare reimbursement.<\/p><p><strong>Account Manager Skills and Qualifications:<\/strong><\/p><ul><li>Client base<\/li><li>Establishing partnerships\/alliances<\/li><li>Prospecting skills<\/li><li>Meeting sales goals<\/li><li>Fostering teamwork<\/li><li>Planning<\/li><li>Building relationships<\/li><li>People Skills<\/li><li>Initiative<\/li><li>Customer focus<\/li><li>Emphasizing excellence<\/li><\/ul><p><strong>Education and Experience Requirements:<\/strong><\/p><ul><li>Bachelor&rsquo;s or master&rsquo;s degree with a concentration in marketing, promotions, advertising sales, or business administration preferred<\/li><li>Industry experience a plus<\/li><li>3+ years sales experience exceeding quotas<\/li><li>Stable employment history<\/li><\/ul><p><strong>[Call to Action]<\/strong>&nbsp;Now you need to turn interested parties into actual applicants. The best performing job descriptions them know exactly how to apply with a well-crafted&nbsp;<strong>call to action<\/strong>. Give prospective managers specific details on resume or application submissions, or tell them to click on the &ldquo;apply&rdquo; button at the top of the job listing.<\/p><p>&nbsp;<\/p><p><strong>Happy with your account manager job description?<\/strong><\/p><p>You&rsquo;ve built the perfect listing &mdash; now take your search for the best account executive to the next level. Monster job ads provide a wide range of monthly plans to choose from, allowing your company to scale up, phase down, and cancel your search at any time. Find the plan that best fits your company and you&rsquo;ll gain access to SearchMonster, our robust candidate engagement platform, at no extra charge.&nbsp;<a href=\"https:\/\/hiring.monster.com\/solutions\/pricing.aspx\">Get started now<\/a>!<\/p>",
+            "company": "Afghan Sadaqat Road",
+            "location": "Kabul",
+            "metadata": {
+                "salary": "0",
+                "skills": [],
+                "type": "Part-Time"
+            }
+        },
+        {
+            "id": 7,
+            "title": "Head of Faizabad Field Office",
+            "description": "<h2>About ${job.company}<\/h2><p><strong>[Intro Paragraph]&nbsp;<\/strong>Begin your listing with an introductory paragraph that tells prospective managers a little bit about your firm and your unique working environment. Just one or three sentences can cater your recruiting pitch to the ideal candidate, and this your chance to set your company apart from the competition.<\/p><p><strong>Account Manager Job Responsibilities:<\/strong><\/p><ul><li>Develops new business by analyzing account potential; initiating, developing, and closing sales; recommending new applications and sales strategies.<\/li><li>Identifies potential in accounts by studying current business; interviewing key customer personnel and company personnel who have worked with customer; identifying and evaluating additional needs; analyzing opportunities.<\/li><li>Initiates sales process by building relationships; qualifying potential; scheduling appointments.<\/li><li>Develops sales by making initial presentation; explaining product and service enhancements and additions; introducing new products and services.<\/li><li>Develops new applications by preparing specifications; conferring with product engineering.<\/li><li>Closes sales by overcoming objections; preparing contracts.<\/li><li>Contributes information to sales strategies by evaluating current product results; identifying needs to be filled; monitoring competitive products; analyzing and relaying customer reactions.<\/li><li>Updates job knowledge by participating in educational opportunities; reading professional publications; maintaining personal networks; participating in professional organizations.<\/li><li>Enhances department and organization reputation by accepting ownership for accomplishing new and different requests; exploring opportunities to add value to job accomplishments.<\/li><\/ul><p><strong>[Work Hours &amp; Benefits]<\/strong>&nbsp;This is a great place to include details about your firm&rsquo;s&nbsp;<strong>working hours and benefits<\/strong>. Tell account managers about telecommuting options, flexible hours or work-week structures, and any travel requirements. You can also highlight any benefits your firm brings to the table, like profit-sharing, paid parental leave, or childcare reimbursement.<\/p><p><strong>Account Manager Skills and Qualifications:<\/strong><\/p><ul><li>Client base<\/li><li>Establishing partnerships\/alliances<\/li><li>Prospecting skills<\/li><li>Meeting sales goals<\/li><li>Fostering teamwork<\/li><li>Planning<\/li><li>Building relationships<\/li><li>People Skills<\/li><li>Initiative<\/li><li>Customer focus<\/li><li>Emphasizing excellence<\/li><\/ul><p><strong>Education and Experience Requirements:<\/strong><\/p><ul><li>Bachelor&rsquo;s or master&rsquo;s degree with a concentration in marketing, promotions, advertising sales, or business administration preferred<\/li><li>Industry experience a plus<\/li><li>3+ years sales experience exceeding quotas<\/li><li>Stable employment history<\/li><\/ul><p><strong>[Call to Action]<\/strong>&nbsp;Now you need to turn interested parties into actual applicants. The best performing job descriptions them know exactly how to apply with a well-crafted&nbsp;<strong>call to action<\/strong>. Give prospective managers specific details on resume or application submissions, or tell them to click on the &ldquo;apply&rdquo; button at the top of the job listing.<\/p><p>&nbsp;<\/p><p><strong>Happy with your account manager job description?<\/strong><\/p><p>You&rsquo;ve built the perfect listing &mdash; now take your search for the best account executive to the next level. Monster job ads provide a wide range of monthly plans to choose from, allowing your company to scale up, phase down, and cancel your search at any time. Find the plan that best fits your company and you&rsquo;ll gain access to SearchMonster, our robust candidate engagement platform, at no extra charge.&nbsp;<a href=\"https:\/\/hiring.monster.com\/solutions\/pricing.aspx\">Get started now<\/a>!<\/p>",
+            "company": "UN-WFP Afghanistan",
+            "location": "Badakhshan",
+            "metadata": {
+                "salary": "300 - 800 $",
+                "skills": ["Field", "Traveling"],
+                "type": "Full-Time"
             }
         }
     ];
@@ -84,13 +120,20 @@ module.exports = () => {
             "total": 0,
             "icon": "headset"
         },
-        // {
-        //     "id": 5,
-        //     "name": "IT/Engineering",
-        //     "description": "",
-        //     "total": 16,
-        //     "icon": "dice-d20"
-        // }
+        {
+            "id": 5,
+            "name": "IT/Engineering",
+            "description": "",
+            "total": 16,
+            "icon": "dice-d20"
+        },
+        {
+            "id": 6,
+            "name": "Education/Training",
+            "description": "",
+            "total": 10,
+            "icon": "graduation-cap"
+        }
     ];
 
     return data;
