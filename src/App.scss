@@ -5,7 +5,11 @@
 
 .search-jumbotron {
     background-color: $tertiary;
-    padding: 1rem 0;
+    padding: 0;
+}
+
+.search-result {
+    padding-top: 1rem;
 }
 
 .job {
