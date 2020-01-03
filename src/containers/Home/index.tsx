@@ -17,9 +17,9 @@ import JumbotronSubtitle from '../../components/JumbotronSubtitle';
 import SearchBar from '../../components/SearchBar';
 import Category from '../../models/Category';
 import CategoryItem from '../../components/CategoryItem';
-import JobCard from '../../components/JobCard';
 import { NavLink } from 'react-router-dom';
 import Storage from '../../storage';
+import JobsView from '../../components/JobsView';
 
 interface HomePropos {
     jobs: JobsState;
@@ -44,12 +44,6 @@ class Home extends React.Component<HomePropos, {}> {
     renderCategories = (categories: Category[]) => {
         return categories.map((category, index) => {
             return (index < 4) ? <CategoryItem {...category} key={category.id} /> : undefined;
-        })
-    }
-
-    renderLatestJobs = (jobs: Job[]) => {
-        return jobs.map((job, index) => {
-            return (index < 6) ? <JobCard {...job} key={job.id} /> : undefined;
         })
     }
 
@@ -109,7 +103,7 @@ class Home extends React.Component<HomePropos, {}> {
                                 {isLoading ? (
                                     <Loading />
                                 ) : (
-                                    this.renderLatestJobs(latestJobs)
+                                    <JobsView jobs={latestJobs} isListView={false} />
                                 )}
                             </CardGroup>
                         </Col>

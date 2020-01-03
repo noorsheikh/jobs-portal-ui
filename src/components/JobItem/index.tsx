@@ -5,26 +5,32 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Job from '../../models/Job';
 import { NavLink } from 'react-router-dom';
 
-const JobItem: React.FC<Job> = (job: Job) => {
+interface JIProps {
+    job: Job
+    isListView: boolean;
+}
+
+const JobItem: React.FC<JIProps> = (props: JIProps) => {
+    const { job, isListView } = props;
     return (
-        <Col className="job-item">
-            <Card className="job-card__body">
+        <Col lg={isListView ? 12 : 4} className="job-item">
+            <Card className="job-item__body">
                 <Row>
-                    <Col lg={6}>
-                        <Card.Title as={NavLink} to={`/jobs/${job.id}`} className="job-card__title">{job.title}</Card.Title>
-                        <Card.Subtitle className="job-card__company">
-                            <FontAwesomeIcon icon={faBuilding} size="sm" className="job-card__company--icon" /> {job.company}
+                    <Col lg={isListView ? 6 : 12}>
+                        <Card.Title as={NavLink} to={`/jobs/${job.id}`} className="job-item__title">{job.title}</Card.Title>
+                        <Card.Subtitle className="job-item__company">
+                            <FontAwesomeIcon icon={faBuilding} size="sm" className="job-item__company--icon" /> {job.company}
                         </Card.Subtitle>
                     </Col>
-                    <Col lg={3}>
-                        <Card.Text className="job-card__type-location">
-                            {job.metadata.type} <span className="job-card__type-location--in">in</span> {job.location},<br /><span className="job-card__post-time">3 days ago</span>
+                    <Col lg={isListView ? 3 : 12}>
+                        <Card.Text className="job-item__type-location">
+                            {job.metadata.type} <span className="job-item__type-location--in">in</span> {job.location},<br /><span className="job-item__post-time">3 days ago</span>
                         </Card.Text>
                     </Col>
-                    <Col lg={3}>
-                    <Card.Text className="job-card__skills">
+                    <Col lg={isListView ? 3 : 12}>
+                    <Card.Text className="job-item__skills">
                         {job.metadata.skills && job.metadata.skills.map((skill, index) => {
-                            return <Badge key={index + 1} pill variant="secondary" className="job-card__skills--item">{skill}</Badge>
+                            return <Badge key={index + 1} pill variant="secondary" className="job-item__skills--item">{skill}</Badge>
                         })}
                     </Card.Text>
                     </Col>

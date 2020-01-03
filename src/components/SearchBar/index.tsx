@@ -2,27 +2,26 @@ import React from 'react';
 import {
     Col,
     Button,
-    Form,
-    InputGroup
+    Form
 } from 'react-bootstrap';
+import SBInput from '../SBInput';
 import Storage from '../../storage';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBuilding } from '@fortawesome/free-solid-svg-icons';
 
-interface SearchPropos {
+interface SPropos {
     searchJobs: Function;
     history: any;
 }
 
-interface SearchState {
+interface SState {
     what: string;
     where: string;
 }
 
-class SearchBar extends React.Component<SearchPropos, SearchState> {
+class SearchBar extends React.Component<SPropos, SState> {
     storage = new Storage();
     keywords = this.storage.getSearchKeywords();
-    state: SearchState = {
+    state: SState = {
         what: this.keywords ? this.keywords.what : '',
         where: this.keywords ? this.keywords.where : ''
     }
@@ -33,12 +32,11 @@ class SearchBar extends React.Component<SearchPropos, SearchState> {
 
     handleChange = (e: any) => {
         const {name, value} = e.currentTarget;
-        this.setState({[name]: value} as SearchState, () => {});
+        this.setState({[name]: value} as SState, () => {});
     }
 
     handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        const storage = new Storage();
-        storage.addSearchKeyword(this.state);
+        this.storage.addSearchKeyword(this.state);
         this.props.searchJobs();
         e.preventDefault();
 
@@ -48,54 +46,35 @@ class SearchBar extends React.Component<SearchPropos, SearchState> {
     }
 
     clearSearch = (): void => {
-        const storage = new Storage();
-        storage.clearSearchKeywords();
+        this.storage.clearSearchKeywords();
         window.location.reload(false);
     }
 
     render() {
-        const storage = new Storage();
-        const keywords = storage.getSearchKeywords();
+        const keywords = this.storage.getSearchKeywords();
         return (
             <div className='search-bar'>
                 <Form onSubmit={this.handleSubmit} noValidate>
                     <Form.Row>
-                        <Col lg={5} className="search-bar__divider">
-                            <InputGroup>
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text className="search-bar__icon">
-                                        <FontAwesomeIcon className="search-bar__icon--color" icon={faSearch}></FontAwesomeIcon>
-                                    </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    className="search-bar__text"
-                                    type="text"
-                                    placeholder="Job title or keyword"
-                                    name="what"
-                                    defaultValue={keywords ? keywords.what : ''}
-                                    onChange={this.handleChange}
-                                    size="lg"
-                                ></Form.Control>
-                            </InputGroup>
-                        </Col>
-                        <Col lg={5}>
-                            <InputGroup>
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text className="search-bar__icon">
-                                        <FontAwesomeIcon className="search-bar__icon--color" icon={faBuilding}></FontAwesomeIcon>
-                                    </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    className="search-bar__text"
-                                    type="text"
-                                    placeholder="Location or company"
-                                    name="where"
-                                    defaultValue={keywords ? keywords.where : ''}
-                                    onChange={this.handleChange}
-                                    size="lg"
-                                ></Form.Control>
-                            </InputGroup>
-                        </Col>
+                        <SBInput
+                            colSize={5}
+                            isDivider={true}
+                            icon={faSearch}
+                            placeholder='Job title or keyword'
+                            name='what'
+                            defaultValue={keywords ? keywords.what : ''}
+                            onChangeFunc={this.handleChange}
+                            inputSize='lg'
+                        />
+                        <SBInput
+                            colSize={5}
+                            icon={faBuilding}
+                            placeholder='Location or company'
+                            name='where'
+                            defaultValue={keywords ? keywords.where : ''}
+                            onChangeFunc={this.handleChange}
+                            inputSize='lg'
+                        />
                         <Col lg={2}>
                             {/* <Button variant="secondary" size='lg' className="btn-space" onClick={this.clearSearch}>Clear</Button> */}
                             <Button

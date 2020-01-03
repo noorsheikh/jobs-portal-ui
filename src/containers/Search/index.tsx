@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import JobItem from '../../components/JobItem';
-import Job from '../../models/Job';
 import { JobsState } from '../../models/States';
 import Loading from '../../components/Loading';
 import SearchBar from '../../components/SearchBar';
 import { searchJobs } from '../../actions';
-import NoJobsFound from '../../components/NotJobsFound';
+import NoJobsFound from '../../components/NoJobsFound';
+import JobsView from '../../components/JobsView';
 
 interface SearchProps {
     jobsSearchResult: JobsState;
@@ -20,10 +19,6 @@ interface SearchState {
 }
 
 class Search extends React.Component<SearchProps, SearchState> {
-    renderJobsSearchResult = (jobs: Job[]) => {
-        return jobs.map(job => <JobItem {...job} key={job.id} />);
-    }
-
     render() {
         const jobsSearchResult = this.props.jobsSearchResult.jobs;
         const { searchJobs, history } = this.props;
@@ -41,7 +36,7 @@ class Search extends React.Component<SearchProps, SearchState> {
                             {isLoading ? (
                                 <Loading />
                             ) : (
-                                jobsSearchResult.length > 0 ? this.renderJobsSearchResult(jobsSearchResult)
+                                jobsSearchResult.length > 0 ? <JobsView jobs={jobsSearchResult} isListView={true} />
                                     : <NoJobsFound />
                             )}
                         </Col>
