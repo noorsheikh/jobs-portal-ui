@@ -1,0 +1,12 @@
+.job-details {
+    margin-top: 1rem;
+
+    &__header {
+        padding: .5rem;
+    }
+
+    &__content {
+        border: 1px solid $gray-200;
+        padding: 1rem;
+    }
+}

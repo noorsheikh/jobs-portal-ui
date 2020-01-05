@@ -1,0 +1,15 @@
+.job-meta {
+    border: 1px solid $gray-200;
+    padding: .5rem;
+    margin-bottom: .5rem;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__value {
+        margin: 0;
+        font-size: $font-size-base * .9;
+        color: $gray-600;
+    }
+}

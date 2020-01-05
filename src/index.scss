@@ -31,8 +31,9 @@ $h6-font-size: $font-size-base * .8;
 @import "./components/SearchBar/SearchBar.scss";
 @import "./components/CategoryItem/CategoryItem.scss";
 @import "./components/JobItem/JobItem.scss";
+@import "./components/JobMeta/JobMeta.scss";
 
 // Containers SCSS Styles
-@import "./containers/JobPost/JobPost.scss";
+@import "./containers/JobDetails/JobDetails.scss";
 
 @import "./App.scss";

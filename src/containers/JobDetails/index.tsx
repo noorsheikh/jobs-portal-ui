@@ -5,26 +5,26 @@ import { connect } from 'react-redux';
 import { fetchJob } from '../../actions';
 import { Container, Row, Col } from 'react-bootstrap';
 import Loading from '../../components/Loading';
-import JobMetadata from '../../components/JobMetadata';
+import JobMeta from '../../components/JobMeta';
 
-interface JobPostProps {
+interface JDProps {
     job: JobState;
     fetchJob: Function;
     match: any;
 }
 
-interface JobPostState {
+interface JDState {
     job: JobState;
 }
 
-class JobPost extends React.Component<JobPostProps, {}> {
+class JobDetails extends React.Component<JDProps, {}> {
     componentDidMount() {
         this.props.fetchJob(this.props.match.params.id);
     }
 
     renderJobMetadata = (metadata: object): any => {
         return Object.entries(metadata).map(([key, value]) => {
-            return <JobMetadata name={key} value={value} />
+            return <JobMeta name={key} value={value} />
         })
     }
 
@@ -36,12 +36,12 @@ class JobPost extends React.Component<JobPostProps, {}> {
                 <Container>
                     <Row>
                         <Col lg={12} className={(isLoading ? 'text-center' : '')}>
-                            <Container className="job-post">
+                            <Container className="job-details">
                                 {isLoading ? (
                                     <Loading />
                                 ) : (
                                     <React.Fragment>
-                                        <Row className="job-post__header">
+                                        <Row className="job-details__header">
                                             <Col lg={12}>
                                                 <h3>{job.title}</h3>
                                             </Col>
@@ -49,8 +49,8 @@ class JobPost extends React.Component<JobPostProps, {}> {
                                                 <h5>{job.company}, {job.location}</h5>
                                             </Col>
                                         </Row>
-                                        <Row className="job-post__content">
-                                            <Col lg={9}>
+                                        <Row>
+                                            <Col lg={9} className="job-details__content">
                                                 <p>{ ReactHtmlParser(eval('`' + job.description + '`')) }</p>
                                             </Col>
                                             <Col lg={3}>
@@ -68,8 +68,8 @@ class JobPost extends React.Component<JobPostProps, {}> {
     }
 }
 
-const mapStateToProps = (state: JobPostState) => ({
+const mapStateToProps = (state: JDState) => ({
     job: state.job
 })
 
-export default connect(mapStateToProps, {fetchJob})(JobPost);
+export default connect(mapStateToProps, {fetchJob})(JobDetails);
