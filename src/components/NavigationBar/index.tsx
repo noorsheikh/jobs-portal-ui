@@ -10,7 +10,7 @@ const NavigationBar: React.FC = () => {
                 <Navbar.Toggle area-controls='responsive-navbar-nav' />
                 <Navbar.Collapse className='navbar__auth-nav justify-content-end' id='responsive-navbar-nav'>
                     <Nav>
-                    <Nav.Link as={NavLink} className='navbar__auth-nav--item' to='/jobs-seekers' exact>
+                    <Nav.Link as={NavLink} className='navbar__auth-nav--item' to='/sign-in' exact>
                         Sign In
                     </Nav.Link>
                     <Nav.Link as={NavLink} className='navbar__auth-nav--item' to='/jobs-posters' exact>

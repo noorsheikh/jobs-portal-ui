@@ -5,10 +5,10 @@ import store from './store';
 
 import Home from './containers/Home';
 import JobPoster from './containers/JobPoster';
-import JobSeeker from './containers/JobSeeker';
 import NavigationBar from './components/NavigationBar';
 import Search from './containers/Search';
 import JobDetails from './containers/JobDetails';
+import SignIn from './containers/SignIn';
 
 class App extends React.Component<{}, {}> {
   render() {
@@ -18,7 +18,7 @@ class App extends React.Component<{}, {}> {
           <NavigationBar />
           <Route path="/" exact component={Home} />
           <Route path="/jobs-posters" render={() => <JobPoster />} />
-          <Route path="/jobs-seekers" render={() => <JobSeeker />} />
+          <Route path="/sign-in" render={() => <SignIn />} />
           <Route path="/jobs" exact component={Search} />
           <Route path="/jobs/:id" exact component={JobDetails} />
         </Router>
