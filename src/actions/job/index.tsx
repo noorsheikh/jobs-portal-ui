@@ -45,7 +45,7 @@ const fetchJobsError = (error: string): JobError => {
 export const fetchJob = (id: number) => async (dispatch: Dispatch) => {
     dispatch(fetchJobsPending());
     try {
-        const job = await axios.get(`http://localhost:3030/jobs/${id}`);
+        const job = await axios.get(`http://localhost:3030/job/${id}`);
         setTimeout(() => {
             dispatch(fetchJobsSuccess(job.data));
         }, 1000);

@@ -14,13 +14,23 @@ export const initialState: JobState = {
         id: 0,
         title: '',
         description: '',
-        company: '',
-        location: '',
-        metadata: {
+        companyId: 0,
+        isActive: 1,
+        postedBy: '',
+        createdOn: '',
+        updatedOn: '',
+        category: {
+            id: 0,
+            name: '',
+            description: '',
+            icon: 'bars',
+            total: 0,
+        },
+        meta: {
             type: '',
             salary: '',
-            skills: []
-        }
+        },
+        skills: []
     },
     error: ''
 };

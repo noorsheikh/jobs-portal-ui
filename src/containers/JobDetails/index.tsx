@@ -6,6 +6,7 @@ import { fetchJob } from '../../actions';
 import { Container, Row, Col } from 'react-bootstrap';
 import Loading from '../../components/Loading';
 import JobMeta from '../../components/JobMeta';
+import { Metadata } from '../../models/Job/index';
 
 interface JDProps {
     job: JobState;
@@ -22,10 +23,8 @@ class JobDetails extends React.Component<JDProps, {}> {
         this.props.fetchJob(this.props.match.params.id);
     }
 
-    renderJobMetadata = (metadata: object): any => {
-        return Object.entries(metadata).map(([key, value]) => {
-            return <JobMeta name={key} value={value} />
-        })
+    renderJobMetadata = (meta: Metadata): any => {
+        return <JobMeta {...meta} />
     }
 
     render() {
@@ -46,7 +45,7 @@ class JobDetails extends React.Component<JDProps, {}> {
                                                 <h3>{job.title}</h3>
                                             </Col>
                                             <Col lg={12}>
-                                                <h5>{job.company}, {job.location}</h5>
+                                                <h5>{job.companyId}, Location</h5>
                                             </Col>
                                         </Row>
                                         <Row>
@@ -54,7 +53,7 @@ class JobDetails extends React.Component<JDProps, {}> {
                                                 <p>{ ReactHtmlParser(eval('`' + job.description + '`')) }</p>
                                             </Col>
                                             <Col lg={3}>
-                                                {this.renderJobMetadata(job.metadata)}
+                                                {this.renderJobMetadata(job.meta)}
                                             </Col>
                                         </Row>
                                     </React.Fragment>

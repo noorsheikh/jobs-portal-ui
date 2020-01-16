@@ -1,4 +1,6 @@
-interface Metadata {
+import Category from "../Category";
+
+export interface Metadata {
     skills?: string[];
     salary?: string;
     type?: string;
@@ -8,11 +10,21 @@ interface Metadata {
     experience?: string;
 }
 
+interface Skill {
+    id: number;
+    skill: string;
+}
+
 export default interface Job {
     id: number;
     title: string;
     description: string;
-    company: string;
-    location: string;
-    metadata: Metadata;
+    companyId: number;
+    isActive: number;
+    postedBy: string;
+    meta: Metadata;
+    createdOn: string;
+    updatedOn: string;
+    category: Category;
+    skills: Skill[]
 }

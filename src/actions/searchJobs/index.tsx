@@ -48,7 +48,7 @@ export const searchJobs = () => async (dispatch: Dispatch) => {
     try {
         const storage = new Storage();
         const keywords = storage.getSearchKeywords();
-        const jobs = await axios.post(`http://localhost:3030/jobs/search`, null, { params: keywords });
+        const jobs = await axios.post(`http://localhost:3030/search`, null, { params: keywords });
 
         setTimeout(() => {
             dispatch(searchJobsSuccess(jobs.data));

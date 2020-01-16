@@ -34,7 +34,8 @@
   },
   "scripts": {
     "mock-server": "nodemon ./mock-backend --host 0.0.0.0 --watch mock-backend",
-    "start": "react-scripts start & npm run mock-server",
+    "start:dev": "react-scripts start & npm run mock-server",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

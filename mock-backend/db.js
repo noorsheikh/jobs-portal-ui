@@ -1,3 +1,4 @@
+'use strict';
 module.exports = () => {
     var data = {};
     data.jobs = [
@@ -137,4 +138,4 @@ module.exports = () => {
     ];
 
     return data;
-}
+};
