@@ -2,11 +2,8 @@ FROM node:12.11.1-alpine
 
 RUN npx create-react-app jobs-portal --typescript
 
-RUN npm install -g nodemon
-
 WORKDIR /jobs-portal
 
 EXPOSE 3000
-EXPOSE 3030
 
-CMD ["yarn", "start:dev"]
+CMD ["yarn", "start"]

@@ -6,4 +6,36 @@ services:
       - .:/jobs-portal
     ports:
       - 3000:3000
+    depends_on:
+      - node
+    networks:
+      jobs_portal:
+
+  node:
+    build:
+      context:  ../jobs-portal-service
+    environment:
+      - MYSQL_HOST=mysql
+    volumes:
+      - ../jobs-portal-service:/app
+    ports:
       - 3030:3030
+    links:
+      - mysql
+    networks:
+      jobs_portal:
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ../jobs-portal-service/migrations/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - TZ=American/New_York
+    networks:
+      jobs_portal:
+
+networks:
+  jobs_portal:

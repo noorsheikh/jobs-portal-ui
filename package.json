@@ -29,12 +29,8 @@
     "redux-thunk": "^2.3.0",
     "typescript": "3.6.4"
   },
-  "devDependencies": {
-    "json-server": "^0.15.1"
-  },
+  "devDependencies": {},
   "scripts": {
-    "mock-server": "nodemon ./mock-backend --host 0.0.0.0 --watch mock-backend",
-    "start:dev": "react-scripts start & npm run mock-server",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

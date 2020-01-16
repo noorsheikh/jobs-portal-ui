@@ -29,7 +29,11 @@ Jobs Portal:
     ✔ Enhance search page @done (1/1/2020, 2:10:09 AM)
     ✔ Single job details page layout and enhancement @done (1/5/2020, 6:10:28 PM)
     ✔ Setup layout for sign in page @done (1/8/2020, 11:13:13 PM)
+    ✔ Refactor code to add nodejs endpoints support @done (1/15/2020, 11:08:37 PM)
     ☐ User login and logout endpoints setup
     ☐ Setup layout for sign up page
     ☐ Setup layout for employers page
+    ☐ Setup Code Linter
+    ☐ Setup datetime for job
+    ✔ Remove mock backend @done (1/15/2020, 11:26:41 PM)
 
