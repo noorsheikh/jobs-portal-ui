@@ -36,4 +36,5 @@ Jobs Portal:
     ☐ Setup Code Linter
     ☐ Setup datetime for job
     ✔ Remove mock backend @done (1/15/2020, 11:26:41 PM)
+    ✔ Setup company field in job model @done (1/25/2020, 11:54:14 PM)
 

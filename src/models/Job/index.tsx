@@ -1,4 +1,5 @@
 import Category from "../Category";
+import { Company } from "../Company";
 
 export interface Metadata {
     skills?: string[];
@@ -19,7 +20,7 @@ export default interface Job {
     id: number;
     title: string;
     description: string;
-    companyId: number;
+    company: Company;
     isActive: number;
     postedBy: string;
     meta: Metadata;

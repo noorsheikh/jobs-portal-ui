@@ -45,7 +45,7 @@ class JobDetails extends React.Component<JDProps, {}> {
                                                 <h3>{job.title}</h3>
                                             </Col>
                                             <Col lg={12}>
-                                                <h5>{job.companyId}, Location</h5>
+                                                <h5>{job.company.name}, {job.company.city}</h5>
                                             </Col>
                                         </Row>
                                         <Row>

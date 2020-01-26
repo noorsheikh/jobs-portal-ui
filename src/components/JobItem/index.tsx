@@ -19,12 +19,12 @@ const JobItem: React.FC<JIProps> = (props: JIProps) => {
                     <Col lg={isListView ? 6 : 12}>
                         <Card.Title as={NavLink} to={`/jobs/${job.id}`} className="job-item__title">{job.title}</Card.Title>
                         <Card.Subtitle className="job-item__company">
-                            <FontAwesomeIcon icon={faBuilding} size="sm" className="job-item__company--icon" /> {job.companyId}
+                            <FontAwesomeIcon icon={faBuilding} size="sm" className="job-item__company--icon" /> {job.company.name}
                         </Card.Subtitle>
                     </Col>
                     <Col lg={isListView ? 3 : 12}>
                         <Card.Text className="job-item__type-location">
-                            {job.meta && job.meta.type} {job.meta && job.meta.type && <span className="job-item__type-location--in">in</span>} Location,<br /><span className="job-item__post-time">3 days ago</span>
+                            {job.meta && job.meta.type} {job.meta && job.meta.type && <span className="job-item__type-location--in">in</span>} {job.company.city},<br /><span className="job-item__post-time">3 days ago</span>
                         </Card.Text>
                     </Col>
                     <Col lg={isListView ? 3 : 12}>
