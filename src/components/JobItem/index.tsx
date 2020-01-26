@@ -1,4 +1,5 @@
 import React from 'react';
+import * as moment from 'moment';
 import { Card, Row, Col, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
@@ -24,7 +25,7 @@ const JobItem: React.FC<JIProps> = (props: JIProps) => {
                     </Col>
                     <Col lg={isListView ? 3 : 12}>
                         <Card.Text className="job-item__type-location">
-                            {job.meta && job.meta.type} {job.meta && job.meta.type && <span className="job-item__type-location--in">in</span>} {job.company.city},<br /><span className="job-item__post-time">3 days ago</span>
+    {job.meta && job.meta.type} {job.meta && job.meta.type && <span className="job-item__type-location--in">in</span>} {job.company.city},<br /><span className="job-item__post-time">{moment.utc(job.createdOn).startOf('day').fromNow()}</span>
                         </Card.Text>
                     </Col>
                     <Col lg={isListView ? 3 : 12}>

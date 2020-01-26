@@ -34,7 +34,7 @@ Jobs Portal:
     ☐ Setup layout for sign up page
     ☐ Setup layout for employers page
     ☐ Setup Code Linter
-    ☐ Setup datetime for job
+    ✔ Setup datetime for job @done (1/26/2020, 12:18:39 AM)
     ✔ Remove mock backend @done (1/15/2020, 11:26:41 PM)
     ✔ Setup company field in job model @done (1/25/2020, 11:54:14 PM)
 
