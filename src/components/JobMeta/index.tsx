@@ -1,9 +1,7 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 import { Metadata } from '../../models/Job';
 
 const JobMeta: React.FC<Metadata> = (meta: Metadata) => {
-    console.log(meta);
     return (
         <React.Fragment>
             {meta.salary && <div className="job-meta">
