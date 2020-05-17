@@ -22,7 +22,6 @@ import Storage from '../../storage';
 import JobsView from '../../components/JobsView';
 import NavigationBar from '../../components/NavigationBar';
 import { CurrentUserState } from '../../reducers/auth';
-import { CurrentUserUtils } from '../../utils';
 
 interface HomePropos {
     jobs: JobsState;
@@ -58,7 +57,7 @@ class Home extends React.Component<HomePropos, {}> {
     }
 
     logout = () => {
-        CurrentUserUtils.removeCurrentUser();
+        window.sessionStorage.removeItem('persist:root');
         window.location.reload();
     }
 
