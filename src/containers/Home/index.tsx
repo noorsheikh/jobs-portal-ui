@@ -20,6 +20,9 @@ import CategoryItem from '../../components/CategoryItem';
 import { NavLink } from 'react-router-dom';
 import Storage from '../../storage';
 import JobsView from '../../components/JobsView';
+import NavigationBar from '../../components/NavigationBar';
+import { CurrentUserState } from '../../reducers/auth';
+import { CurrentUserUtils } from '../../utils';
 
 interface HomePropos {
     jobs: JobsState;
@@ -28,11 +31,13 @@ interface HomePropos {
     fetchCategories: Function;
     categories: CategoriesState;
     history: any;
+    currentUser: CurrentUserState;
 }
 
 interface HomeState {
     jobs: JobsState;
     categories: CategoriesState;
+    currentUser: CurrentUserState;
 }
 
 class Home extends React.Component<HomePropos, {}> {
@@ -52,13 +57,21 @@ class Home extends React.Component<HomePropos, {}> {
         storage.clearSearchKeywords();
     }
 
+    logout = () => {
+        CurrentUserUtils.removeCurrentUser();
+        window.location.reload();
+    }
+
     render() {
         const { searchJobs, history } = this.props;
         const latestJobs: Job[] = this.props.jobs.jobs;
         const isLoading: boolean = this.props.jobs.pending;
         const categories: Category[] = this.props.categories.categories;
+        const { currentUser } = this.props.currentUser;
+        console.log(this.props);
         return (
             <React.Fragment>
+                <NavigationBar {...currentUser} logout={this.logout} />
                 <Jumbotron className="main-jumbotron">
                     <Container>
                         <JumbotronTitle />
@@ -116,7 +129,8 @@ class Home extends React.Component<HomePropos, {}> {
 
 const mapStateToProps = (state: HomeState) => ({
     jobs: state.jobs,
-    categories: state.categories
+    categories: state.categories,
+    currentUser: state.currentUser,
 })
 
 export default connect(mapStateToProps, {fetchJobs, searchJobs, fetchCategories})(Home);
